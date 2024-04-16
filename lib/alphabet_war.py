@@ -23,7 +23,7 @@ def alphabet_war(fight):
     result = sum("zdqm".find(c) - "sbpw".find(c) for c in fight)
     return "{} side wins!".format("Left" if result < 0 else "Right") if result else "Let's fight again!"
 
-print(alphabet_war("z"))
-print(alphabet_war("zdqmwpbs"))
-print(alphabet_war("zzzzs"))
-print(alphabet_war("wwwwwwz"))
+# print(alphabet_war("z"))
+# print(alphabet_war("zdqmwpbs"))
+# print(alphabet_war("zzzzs"))
+# print(alphabet_war("wwwwwwz"))
