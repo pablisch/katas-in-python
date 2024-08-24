@@ -3,10 +3,17 @@
 ## Virtual environments
 To create a virtual environment, e.g. called katas_venv:
 ```bash
-venv katas_venv
+python3 -m venv .katas_venv
 ```
 
-To activate a virtual environment, e.g. to actviate the already created, katas_venv:
+To activate a virtual environment, e.g. to activate the already created, katas_venv:
 ```bash
-source katas_venv/bin/activate
+python3 -m source .katas_venv/bin/activate
 ```
+
+To deactivate a virtual environment:
+```bash
+deactivate
+```
+
+## Pytest
