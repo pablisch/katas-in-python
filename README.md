@@ -38,3 +38,46 @@ To run a specific test function (scenario), run, e.g. `pytest tests/test_even_nu
 
 To run all tests that match a regex pattern, run, e.g. `pytest -k "eve"`
 This example will run `test_even_numbers.py` and `test_dna_reverse_complement.py`.
+
+## Pytest Watch
+
+In addition to the normal Pytest functionality, you can add a watcher to it such as Pytest Watch.
+
+To install, `pip install pytest-watch`
+
+NOTE: this should be simple but gave me all sorts of problems and after much faffing, uninstalling and re-installing it fixed things.
+
+To run all tests, `ptw -n`. The `-n` turns the beep on fail off!
+
+Pytest Watch has verbose mode but I have not seen any regex function.
+
+### Writing a Pytest test
+
+#### For simple one-off tests
+The basic form of the tests are as follows:
+- import Pytest and function(s) to be tested
+- define the test function including assertion
+
+Example:
+
+#### For parameterised tests
+The basic form of the tests are as follows:
+- import Pytest and function(s) to be tested
+- list parameterised tests
+- define the test function including assertion
+
+Example:
+```python
+import pytest
+from lib.add_length import add_length
+
+@pytest.mark.parameterize('string, expected_result', [
+    ("apple ban", ["apple 5", "ban 3"]),
+    ("you will win", ["you 3", "will 4", "win 3"]),
+])
+def test_add_length_function_returns_correct_list(string, expected_result):
+    result = add_length(string)
+    assert result == expected_result
+```
+
+
