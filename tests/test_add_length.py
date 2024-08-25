@@ -8,3 +8,8 @@ from lib.add_length import add_length
 def test_add_length_function_returns_correct_list(string, expected_result):
     result = add_length(string)
     assert result == expected_result
+
+def test_add_length_single_test():
+    result = add_length("single case test")
+    expected_result = ["single 6", "case 4", "test 4"]
+    assert result == expected_result

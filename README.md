@@ -1,4 +1,5 @@
 # Python katas
+repo url: https://github.com/pablisch/katas-in-python
 
 ## Running a Python file
 To run a Python file, simply run `python3` followed by the file path and name, e.g. to run `even_numbers.py`:
@@ -53,12 +54,23 @@ Pytest Watch has verbose mode but I have not seen any regex function.
 
 ### Writing a Pytest test
 
+See example tests in `test_add_length.py`
+
 #### For simple one-off tests
 The basic form of the tests are as follows:
 - import Pytest and function(s) to be tested
 - define the test function including assertion
 
 Example:
+```python
+import pytest
+from lib.add_length import add_length
+
+def test_add_length_function_returns_correct_list():
+    result = add_length("single case test")
+    expected_result = ["single 6", "case 4", "test 4"]
+    assert result == expected_result
+```
 
 #### For parameterised tests
 The basic form of the tests are as follows:
