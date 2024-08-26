@@ -1,5 +1,5 @@
 # Use a dictionary to replace items in an iterable such as a string, tuple or list BUT NOT dictionaries
-# Apart from easy replacement of mulitple values, this also allows for swapping
+# Apart from easy replacement of multiple values, this also allows for swapping
 
 # This first function will throw an error for any char in the string that is not in the replacement_map
 def replace_all_chars_in_string(string, replacement_map):

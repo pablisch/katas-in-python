@@ -21,3 +21,13 @@ def same_case_simple(a, b):
 # a.isupper() == b.isupper() returns true or 1 when they match and 0 if they do not. I always forget this.
 def same_case_concise(a, b):
     return a.isupper() == b.isupper() if a.isalpha() and b.isalpha() else -1
+
+# simple combining of the two chars
+def same_case_combined(a, b):
+    c = a+b
+    if not c.isalpha():
+        return -1
+    if c.islower() or c.isupper():
+        return 1
+    else:
+        return 0
