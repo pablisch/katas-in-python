@@ -31,8 +31,6 @@ print(count_dict)
 print(count_dict['h'])
 
 my_dict = {'h': 1, 'e': 1, 'l': 2, 'o': 1}
-my_dict = {'h': 2, 'e': 1, 'l': 2, 'o': 1}
-my_dict = {'h': 2, 'e': 3, 'l': 2, 'o': 1}
 for key, value in my_dict.items():
     print(key, value)
 
