@@ -53,6 +53,7 @@ def data_reverse_codewars(data):
 
     for i in range(len(data) - 8, -1, -8):
         print ("res before:", res)
+        print ("i:", i)
         print ("chunk:", data[i:i + 8])
         res.extend(data[i:i + 8])
         print ("res after:", res, "\n")
