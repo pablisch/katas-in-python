@@ -38,7 +38,6 @@ def data_reverse(data):
     # [data[i * 8:(i + 1) * 8] => range from data, i.e. when i==0, data[0:8], when i==1, data[8:16] where the range end is exclusive.
     # for i in range(len(data) // 8)] => for loop in range data's length / 8 with no remainder, e.g. if len(data)==4, range(4), i.e. 0 to 3.
     chunks = [data[i * 8:(i + 1) * 8] for i in range(len(data) // 8)]
-    print (chunks)
 
     # Step 2: Reverse the order of chunks
     reversed_chunks = list(reversed(chunks))
@@ -49,8 +48,16 @@ def data_reverse(data):
     return reversed_data
 
 
-data_reverse(sample)
+def data_reverse_codewars(data):
+    res = []
 
-from itertools import chain
+    for i in range(len(data) - 8, -1, -8):
+        print ("res before:", res)
+        print ("chunk:", data[i:i + 8])
+        res.extend(data[i:i + 8])
+        print ("res after:", res, "\n")
 
-reversed_data = list(chain.from_iterable(reversed_chunks))
+    return res
+
+
+data_reverse_codewars(sample)
