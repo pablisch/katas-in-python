@@ -1,3 +1,5 @@
+# KEYWORDS: dictionary, count, occurrences, instances
+
 def make_dict_of_count_occurrences(iterable):
     count_dict = {}  # Create an empty dictionary to store the count of occurrences
 

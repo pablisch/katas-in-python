@@ -92,4 +92,9 @@ def test_add_length_function_returns_correct_list(string, expected_result):
     assert result == expected_result
 ```
 
+## Keywords
+At some point I tried to start labelling katas with keywords as future reference of where methods and structures, etc. had been used. A search for keywords, e.g. dictionary, split, etc. will locate certain katas. 
+
+Many katas remain undocumented.
+
 

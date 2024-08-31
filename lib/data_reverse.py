@@ -1,3 +1,5 @@
+# KEYWORDS: chunk, reverse, split, comprehension
+
 # import numpy as np
 
 sample = [1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]

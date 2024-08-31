@@ -1,3 +1,5 @@
+# KEYWORDS: format, map, lambda, interpolation, append
+
 def add_length(str):
     # split the string into words
     words = str.split()
