@@ -1,3 +1,4 @@
+# SEE tests/test_replacement_mapping.py for tests
 # Use a dictionary to replace items in an iterable such as a string, tuple or list BUT NOT dictionaries
 # Apart from easy replacement of multiple values, this also allows for swapping
 
@@ -25,3 +26,14 @@ def replace_selected_items_in_tuple(input_tuple, replacement_map):
 # As above but for set.
 def replace_selected_items_in_set(input_set, replacement_map):
     return set(replacement_map.get(item, item) for item in input_set)
+
+# Example Test:
+import pytest
+# Test for ALL chars in a STRING
+@pytest.mark.parametrize('string, replacement_map, expected_result', [
+    ('hello', {'h': 'm', 'e': 'a', 'l': 't', 'o': 'i'}, 'matti'),
+    ('hello', {'h': 'H', 'e': '3', 'l': '1', 'o': '0'}, 'H3110'),
+])
+def test_replace_all_chars_in_string_returns_string_with_mapped_replacements(string, replacement_map, expected_result):
+    result = replace_all_chars_in_string(string, replacement_map)
+    assert result == expected_result
